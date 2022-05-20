@@ -4,11 +4,16 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>kalopsia</title> <!-- este es el titulo -->
-        <link rel="shortcut icon" href="./img/icono.png">
+        <!-- este es el titulo -->
+        <title>kalopsia</title> 
+        <link rel="shortcut icon" href="./imagenes/icono.png">
+        <!-- bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!-- iconos -->
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
         <!-- css -->
         <link rel="stylesheet" href="scss/style.css">
+        <!-- seo -->
         <meta name="description" content="kalopsia: accesorios hechos a mano, personalizados o de catálogo">
         <meta name="keywords" content="kalopsia,accesorios,collares,pulseras,moda,Córdoba,catálogo,bijuterie">
     </head>
@@ -32,17 +37,18 @@
             </nav>
         </header>
         <main>
+            <!-- kalopsia index -->
             <section class="kalopsia">
                 <h1 class="kalopsia__barra">Estamos contestando mensajes de Lunes a Viernes de 9:00 a 20:00 hs</h1>
                 <div class="kalopsia__principal">
                     <!-- logo kalopsia en body -->
-                    <img class="kalopsia__principal____logo" src="./img/logokalopsia.png" alt="logo kalopsia" height="250px"> 
+                    <img class="kalopsia__principal__logo" src="./imagenes/logokalopsia.png" alt="logo kalopsia" height="250px"> 
                 </div>
             </section>
             <!-- segundo scroll-->
             <section class="tienda-index"> 
                 <h2 class="tienda-index__titulo">TIENDA</h2>
-                <p class="tienda-index__parrafo1">conocé todos nuestros accesorios aquí</p>
+                <p class="tienda-index__parrafo">conocé todos nuestros accesorios aquí</p>
                 <a href="./paginas/tienda.html" class="tienda-index__boton">ház click aquí</a> 
             </section>
             <!-- tercer scroll -->
@@ -51,21 +57,46 @@
                 <p class="nosotros-index__parrafo">te contamos un poco más acerca de la marca y quiénes somos</p>
                 <a href="./paginas/nosotros.html" class="nosotros-index__boton">kalopsia</a>
             </section>
-            <div class="overlay">
-                <!-- overlay whatsapp -->
-                <a href="https://wa.me/+5493512560015" class="overlay__whatsapp" target="_blank"><img src="./img/whatsapp.png" alt="logo whatsapp" height="60px"></a>
-                <!-- overlay instagram -->
-                <a href="https://www.instagram.com/kalopsia.ac/" class="overlay__instagram" target="_blank"><img src="./img/instagram.png" alt="logo instagram" height="60px"></a>
-            </div>
+            <!-- overlays redes sociales -->
+            <section class="overlay-redes">
+                <div class="overlay-redes__iconos">
+                    <svg heigth="80" width="80">
+                    <circle cx="40" cy="40" r="35" stroke="white" stroke-width="4" fill="none"></circle>
+                    </svg>
+                    <a href="https://www.instagram.com/kalopsia.ac/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                </div> 
+                <div class="overlay-redes__iconos">
+                    <svg heigth="80" width="80">
+                        <circle cx="40" cy="40" r=35 stroke="white" stroke-width="4" fill="none"></circle>
+                    </svg>
+                    <a href="https://wa.me/+5493512560015" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+                </div>
+            </section>
         </main>
-        <footer id="footer">
-            <div class="footer__ubicacion">
-                <img src="./img/logo-ubicacion .png" alt="icono de ubicación" height="30px" class="footer__ubicacion__icono">
-                <p class="footer__ubicacion__parrafo">Córdoba, Argentina</p>
+
+    
+        <footer class="footer">
+            <div class="footer__grupo1">
+                    <div class="footer__grupo1__box">
+                        <p>Sitio diseñado y desarrollado con mucho amor y esfuerzo aplicando los conocimientos aprendidos por Coderhouse. </p>
+                    </div>
+                <div class="footer__grupo1__box">
+                    <h2>De dónde somos</h2>
+                    <p>Códoba, Argentina</p>
+                </div>
+                <div class="footer__grupo1__box">
+                    <figure>
+                        <a href="#">
+                            <img src="./imagenes/logofooter.png" alt="logo para footer">
+                        </a>
+                    </figure>
+                </div>
+            </div>
+            <div class="footer__grupo1">
+                <p class="footer__grupo1__creditos"> &copy; Kalopsia Accesorios 2022 creado por Valentina Mercado Ongini. </p>
             </div> 
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8475.88574449039!2d-64.28919747049304!3d-31.340102287195354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329eae42c4440b%3A0x473b98d5636193de!2sArguello%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1647063219232!5m2!1ses-419!2sar" width="500" height="60" style="border:0;" allowfullscreen="" loading="lazy" class="footer__googlemaps"></iframe>
-            <p class="footer__creditos"><i>Kalopsia Accesorios, © 2022. </i></p>
         </footer> 
+
         <!-- link de bootstrap -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body> 
