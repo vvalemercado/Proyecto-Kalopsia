@@ -1,0 +1,22 @@
+@mixin boton ($colorFondo, $colorTexto){
+    background-color:transparent;
+    border-radius: 28px;
+    border: 1px solid #f0ffff;
+    display:inline;
+    cursor:pointer;
+    color:#f0ffff;
+    font-family: $fuentetexto;
+    font-size: 17px;
+    padding: 16px 31px;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+    &:hover {
+        background-color: $colorFondo;
+        box-shadow: 0px 8px 25px $hueso;
+        color: $colorTexto;
+        transform: translateY(-7px);
+    }
+    &:active {
+        transform: translateY(-1px);
+    }
+}

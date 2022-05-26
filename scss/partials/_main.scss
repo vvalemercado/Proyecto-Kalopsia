@@ -1,0 +1,418 @@
+@import "./vars";
+@import "./componentes";
+
+// Bloque de codigo relacionado al body del "index".
+.main-index{
+    &__kalopsia{
+        top: 0px;
+        width: 100%;
+        height: 100vh;
+        &__barra{
+            display: flex;
+            width: 100%;
+            height: 5%;
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 25px 5px;
+            justify-content: center;
+            align-items: center;
+            background-color: $azul;
+            color: $amarillo;
+            letter-spacing: 0.1rem;
+            font-family: $fuentetexto;
+        }
+        &__principal{
+            display: flex;
+            width: 100%;
+            height: 95%;
+            justify-content: center;
+            align-items: center;
+            background: {
+                image: url(../imagenes/imagenindex.png);
+                size: cover;
+                position: center;
+                attachment: fixed;
+                repeat: no-repeat;
+            }
+            img{
+                width: 80%;
+                height: auto;
+            }
+        }
+    }
+    &__tienda-index{
+        position: relative;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: url(../imagenes/imagen2.png);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100vh;
+        &__titulo{
+            color: $amarillo;
+            font-family: $fuentetexto;
+            font-size: 2.5rem;
+        }
+        &__parrafo{
+            color: $hueso;
+            font-family: $fuentetexto;
+            margin: 0px 20px;
+            margin-bottom: 20px;
+            font-size: 1.0rem;
+        }
+        &__boton{
+            @include boton($amarillo, $azul);
+        }
+    }
+    &__nosotros-index{
+        position: relative;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: url(../imagenes/imagen3.png);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100vh;
+        &__titulo{
+            color: $azul;
+            font-family: $fuentetexto;
+            font-size: 2.5rem;
+        }
+        &__parrafo{
+            color: $hueso;
+            font-family: $fuentetexto;
+            font-size: 0.9rem;
+            margin: 0px 20px;
+            margin-bottom: 20px;
+        }
+        &__boton{
+            @include boton($azul, $amarillo);
+        }
+    }
+    &__overlay-redes{
+        position: absolute;
+        display: flex;
+        z-index: 3;
+        top: 93%;
+        &__iconos{
+            transform: scale(0.7);
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin: 3px;
+            border-radius: 50%;
+            transition: all .8s;
+            cursor: pointer;
+            &:hover{
+                background-color: #e60073;
+                box-shadow:  0 0 20px #e60073 ;
+            }
+            &:hover:nth-child(2){
+                background-color: #0ddb33;
+                box-shadow:  0 0 20px #0ddb33;
+            }
+            a i{
+                color: #ffffff;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                font-size: 2.3rem;
+            }
+            svg circle{
+                stroke-dasharray: 150;
+                transition: all .5s ease-in-out;
+            }
+            &:hover circle {
+                stroke-dasharray: 220;
+            }
+        }
+    }
+}
+// Bloque de codigo para todas las paginas que no sean el index.
+.main-paginas{
+    width: 100%;
+    background-image: url(../imagenes/fondotienda.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    h1{
+        transition: all .8s;
+        font-family: $fuentetexto;
+        color: #0E4C73;
+        font-size: 2.0rem;
+        padding: 40px 5px;
+        text-align: center;
+        font-weight: bold;
+    }
+    // Bloque de codigo especifico de la tienda.
+    &__catalogo{
+        display: flex;
+        gap: 30px;
+        padding: 30px 0px;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        .card{
+            font-family: $fuentetexto;
+            background-color: $hueso;
+            border: none;
+            height: 275px;
+            max-height: 275px;
+            overflow: hidden;
+            h5{
+                font-weight: bold;
+                font-size: 1.0rem;
+            }
+        }
+    }
+    // Bloque de codigo relacionada a la pagina "nosotros".
+    &__intro{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0px 50px;
+        margin-bottom: 30px;
+        font-family: $fuentetexto;
+        img{
+            padding: 40px;
+            width: 300px;
+            height: auto;
+        }
+    }
+    &__cuadrofotos{
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: grid;
+        gap: 10px;
+        overflow: visible;
+        grid-template-areas: 
+                        "area1 area3"
+                        "area2 area2";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 2fr;
+        padding: 0px 20px;
+        img{
+            width: 100%;
+            height: auto;
+        }
+        &__foto1{
+            grid-area: area1;
+        }
+        &__foto2{
+            grid-area: area2;
+        }
+        &__foto3{
+            grid-area: area3;
+        }
+    }
+    &__queeskalopsia{
+        h2{
+            color: $azul;
+        }
+        font-family: $fuentetexto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 60px 50px;
+    }
+    // Bloque de codigo relacionada a la pagina "nosotros".
+    &__contacto{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5px;
+        &__textoyredes{
+            margin: 5px 20px;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: $fuentetexto;
+            color: $azul;
+            transition: all .8s;
+            &__overlay-redes{
+                &__ubicacion{
+                    font-weight: bold;
+                    margin-top: 15px;
+                }
+                a{
+                    text-decoration: none;
+                    color: $amarillo;
+                    font-weight: bold;
+                }
+                &__iconos{
+                    display: flex;
+                    position: relative;
+                    margin-top: 20px;
+                    border-radius: 50%;
+                    transition: all .8s;
+                    i{
+                        color: $azul;
+                        font-size: 2.5rem;
+                    }
+                    p{
+                        display: flex;
+                        justify-content: center;
+                        text-align: center;
+                        align-items: center;
+                        padding: 0px 10px;
+                    }
+                }
+            }
+        }
+        &__formulario{
+            font-family: $fuentetexto;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin: 40px 30px;
+            &__campos{
+                margin: 10px 0px;
+                color: $azul;
+                font-weight: bold;
+                &__blankspace{
+                    position: relative;
+                    display: flex;
+                    width: 100%;
+                    height: auto;
+                    border-radius: 5px;
+                    border: 0px;
+                    padding: 10px 40px;
+                    background-color: $amarillo;
+                }
+            }
+            &__boton-enviar{
+                @include boton($azul, $amarillo);
+                color: $azul;
+                border-color: $azul;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 768px){
+    .main-index{
+        &__kalopsia{
+            &__barra{
+                padding: 10px 0px;
+            }
+            &__principal{
+                width: 100%;
+                height: 100vh;
+                img{
+                    width: 45%;
+                }
+            }
+        }
+        &__tienda-index{
+            &__titulo{
+                font-size: 3.1rem;
+            }
+            &__parrafo{
+                font-size: 1.3rem;
+            }
+        }
+        &__nosotros-index{
+            &__titulo{
+                font-size: 3.1rem;
+            }
+            &__parrafo{
+                font-size: 1.3rem;
+            }
+        }
+        &__overlay-redes{
+                position: fixed;
+                display: block;
+                right: 20px;
+                top: 80px; 
+            &__iconos{
+                transform: scale(1.0);
+                width: 80px;
+                height: 80px;
+                margin: 20px;
+            }
+        }
+    }
+    .main-paginas{
+        &__intro{
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+        }
+        &__cuadrofotos{
+            grid-template-areas: 
+                        "area1 area2"
+                        "area3 area2";
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 1fr 1fr;
+            &__foto1{
+                grid-area: area1;
+            }
+            &__foto2{
+                grid-area: area2;
+            }
+            &__foto3{
+                grid-area: area3;
+            }
+        }
+        &__contacto{
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 5px;
+            &__textoyredes{
+                margin: 20px;
+                margin-left: 60px;
+                display: flex;
+                justify-content: left;
+                align-items: flex-start;
+                flex-direction: column;
+                text-align: left;
+            }
+            &__formulario{
+                font-family: $fuentetexto;
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                margin: 50px 60px;
+                &__campos{
+                    margin: 10px 0px;
+                    color: $azul;
+                    font-weight: bold;
+                    &__blankspace{
+                        position: relative;
+                        display: flex;
+                        width: 100%;
+                        height: auto;
+                        border-radius: 5px;
+                        border: 0px;
+                        padding: 10px 40px;
+                        background-color: $amarillo;
+                    }
+                }
+            }
+        }
+    }
+}

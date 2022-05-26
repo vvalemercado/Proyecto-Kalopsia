@@ -1,0 +1,81 @@
+.footer{
+    width:100%;
+    background-color: $hueso;
+    display: grid;
+    grid-template-areas:
+                    ". area1 area1 ."
+                    ". area2 area3 ."
+                    ". area4 area4 .";
+    grid-template-columns: 10% repeat(2,1fr) 10%;
+    grid-template-rows: 1fr 0.6fr 1fr;
+    justify-items: center;
+    align-items: center;
+    color: #595959;
+    box-shadow: inset 0px 10px 10px #d2d2d1;
+    z-index: 10;
+    &__texto{
+        grid-area: area1;
+        margin-top: 10%;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+    &__ubicacion{
+        grid-area: area2;
+        font-size: 0.9rem;
+
+        h2{
+            color: #393939;
+            font-size: 1.0rem;
+        }
+    }
+    &__imagen{
+        grid-area: area3;
+        align-self: center;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__creditos{
+        width: 100%;
+        text-align: center;
+        grid-area: area4;
+        font-size: 0.8rem;
+        a{
+            text-decoration: none;
+            color: #393939;
+        }
+    }
+}
+
+@media screen and (min-width: 700px){
+    .footer{
+        grid-template-areas:
+                        ". area1 area2 area3 ."
+                        ". area4 area4 area4 .";
+        grid-template-columns: 10% repeat(3,1fr) 10%;
+        grid-template-rows: 3fr 1fr;
+        &__imagen{
+            grid-area: area3;
+            padding: 10%;
+        }
+        &__texto{
+            grid-area: area1;
+            margin-top: 20%;
+            text-align: left;
+            font-size: 1.0rem;
+        }
+        &__ubicacion{
+            grid-area: area2;
+            margin-top: 15%;
+            font-size: 1.0rem;
+            h2{
+                font-size: 1.3rem;
+            }
+        }
+        &__creditos{
+            grid-area: area4;
+            font-size: 1.0rem;
+        }
+    }
+}
