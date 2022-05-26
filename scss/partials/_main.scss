@@ -233,7 +233,7 @@
         align-items: center;
         padding: 60px 50px;
     }
-    // Bloque de codigo relacionada a la pagina "nosotros".
+    // Bloque de codigo relacionada a la pagina "contacto".
     &__contacto{
         display: flex;
         flex-direction: column;
@@ -305,6 +305,52 @@
                 @include boton($azul, $amarillo);
                 color: $azul;
                 border-color: $azul;
+            }
+        }
+    }
+    // Bloque de codigo relacionada a la pagina "como comprar".
+    &__como-comprar{
+        display: flex;
+        flex-direction: column;
+        font-family: $fuentetexto;
+        padding: 0px 70px;
+        padding-bottom: 70px;
+        &__saludo{
+            transition: all .8s;
+            text-align: center;
+            font-size: 1.0rem;
+            padding: 20px;
+            font-weight: 500;
+            background-color: $azul;
+            color: $amarillo;
+            border-radius: 20px ;
+            border-color: $azul;
+        }
+        &__subtitulo{
+            padding-top: 30px;
+            h2{
+                font-weight: 500;
+                color: $azul;
+                text-transform: uppercase;
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+            p{
+                font-size: 1.2rem;
+                padding-bottom: 30px;
+            }
+            &__ir-tienda{
+                @include boton($amarillo, $azul);
+                color: $azul;
+                font-weight: bold;
+                border-color: $azul;
+                box-shadow: 0px 0px 10px $azul;
+                font-size: 0.8rem;
+                text-align: center;
+            }
+            &__redes{
+                font-weight: bold;
+                color: $amarillo;
             }
         }
     }
@@ -411,6 +457,18 @@
                         padding: 10px 40px;
                         background-color: $amarillo;
                     }
+                }
+            }
+        }
+        &__como-comprar{
+            &__saludo{
+                font-size: 1.5rem;
+                padding: 10px;
+                border-radius: 20px ;
+            }
+            &__subtitulo{
+                &__ir-tienda{
+                    font-size: 1.0rem;
                 }
             }
         }

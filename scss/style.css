@@ -204,7 +204,7 @@
   background-color: transparent;
   border-radius: 28px;
   border: 1px solid #f0ffff;
-  display: inline;
+  display: inline-block;
   cursor: pointer;
   color: #f0ffff;
   font-family: "Montserrat", sans-serif;
@@ -272,7 +272,7 @@
   background-color: transparent;
   border-radius: 28px;
   border: 1px solid #f0ffff;
-  display: inline;
+  display: inline-block;
   cursor: pointer;
   color: #f0ffff;
   font-family: "Montserrat", sans-serif;
@@ -607,7 +607,7 @@
   background-color: transparent;
   border-radius: 28px;
   border: 1px solid #f0ffff;
-  display: inline;
+  display: inline-block;
   cursor: pointer;
   color: #f0ffff;
   font-family: "Montserrat", sans-serif;
@@ -632,6 +632,90 @@
 .main-paginas__contacto__formulario__boton-enviar:active {
   -webkit-transform: translateY(-1px);
           transform: translateY(-1px);
+}
+
+.main-paginas__como-comprar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  padding: 0px 70px;
+  padding-bottom: 70px;
+}
+
+.main-paginas__como-comprar__saludo {
+  -webkit-transition: all .8s;
+  transition: all .8s;
+  text-align: center;
+  font-size: 1.0rem;
+  padding: 20px;
+  font-weight: 500;
+  background-color: #0E4473;
+  color: #EABE54;
+  border-radius: 20px;
+  border-color: #0E4473;
+}
+
+.main-paginas__como-comprar__subtitulo {
+  padding-top: 30px;
+}
+
+.main-paginas__como-comprar__subtitulo h2 {
+  font-weight: 500;
+  color: #0E4473;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.main-paginas__como-comprar__subtitulo p {
+  font-size: 1.2rem;
+  padding-bottom: 30px;
+}
+
+.main-paginas__como-comprar__subtitulo__ir-tienda {
+  background-color: transparent;
+  border-radius: 28px;
+  border: 1px solid #f0ffff;
+  display: inline-block;
+  cursor: pointer;
+  color: #f0ffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  padding: 16px 31px;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  color: #0E4473;
+  font-weight: bold;
+  border-color: #0E4473;
+  -webkit-box-shadow: 0px 0px 10px #0E4473;
+          box-shadow: 0px 0px 10px #0E4473;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.main-paginas__como-comprar__subtitulo__ir-tienda:hover {
+  background-color: #EABE54;
+  -webkit-box-shadow: 0px 8px 25px #F2EFE9;
+          box-shadow: 0px 8px 25px #F2EFE9;
+  color: #0E4473;
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+}
+
+.main-paginas__como-comprar__subtitulo__ir-tienda:active {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+
+.main-paginas__como-comprar__subtitulo__redes {
+  font-weight: bold;
+  color: #EABE54;
 }
 
 @media screen and (min-width: 768px) {
@@ -766,6 +850,14 @@
     border: 0px;
     padding: 10px 40px;
     background-color: #EABE54;
+  }
+  .main-paginas__como-comprar__saludo {
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 20px;
+  }
+  .main-paginas__como-comprar__subtitulo__ir-tienda {
+    font-size: 1.0rem;
   }
 }
 
